@@ -34,18 +34,21 @@ import org.springframework.security.core.userdetails.UserDetails;
 @RestController
 public class AuthenticationRestController {
     
+    //This value can be found in the application.yml file
     @Value("${jwt.header}")
     private String tokenHeader;
     
     @Autowired
     private AuthenticationManager authMan;
     
+    //This is the token generator/validator. Can be replaced with future microservice providing/varifying tokens
     @Autowired
     private JwtTokenUtil tokenUtil;
     
     @Autowired
     private UserDetailsService userDetServ;
     
+    //This value can be found in the application.yml file
     @RequestMapping(value = "${jwt.route.authentication.path}", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationRequest authReq, Device dev) throws AuthenticationException{
         
@@ -63,6 +66,7 @@ public class AuthenticationRestController {
         return ResponseEntity.ok(new JwtAuthenticationResponse(token));
     }
     
+    //This value can be found in the application.yml file
     @RequestMapping(value = "${jwt.route.authentication.refresh}", method = RequestMethod.GET)
     public ResponseEntity<?> refreshAndGetAuthenticationToken(HttpServletRequest req){
         String token = req.getHeader(tokenHeader);

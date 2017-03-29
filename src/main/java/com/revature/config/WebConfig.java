@@ -1,4 +1,4 @@
-package com.revature;
+package com.revature.config;
 
 import java.time.LocalDate;
 import org.springframework.context.annotation.Configuration;

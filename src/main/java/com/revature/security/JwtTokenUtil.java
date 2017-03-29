@@ -9,6 +9,7 @@ package com.revature.security;
  *
  * @author FayeRedd
  */
+import com.revature.security.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -21,6 +22,11 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+/*
+* This class is the demo token generator/validator. It can be replaced in the future with 
+* a microservice providing these same features
+*/
 
 @Component
 public class JwtTokenUtil implements Serializable {
@@ -36,9 +42,11 @@ public class JwtTokenUtil implements Serializable {
     private static final String AUDIENCE_MOBILE = "mobile";
     private static final String AUDIENCE_TABLET = "tablet";
 
+    //This value is stored in the application.yml file
     @Value("${jwt.secret}")
     private String secret;
 
+    //This value is stored in the application.yml file
     @Value("${jwt.expiration}")
     private Long expiration;
 

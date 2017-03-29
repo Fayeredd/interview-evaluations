@@ -25,9 +25,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserRestController {
     
+    //This value is found in the application.yml file
     @Value("${jwt.header}")
     private String tokenHeader;
     
+    //This is the token generator/validator. Can be replaced with future microservice providing/varifying tokens
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
     
