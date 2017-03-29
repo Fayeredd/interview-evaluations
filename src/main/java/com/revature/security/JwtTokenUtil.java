@@ -9,7 +9,7 @@ package com.revature.security;
  *
  * @author FayeRedd
  */
-import com.revature.security.JwtUser;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
