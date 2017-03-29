@@ -7,7 +7,7 @@ package com.revature.security.service;
 
 import com.revature.model.security.User;
 import com.revature.security.JwtUserFactory;
-import com.revature.security.repository.UserRepository;
+import com.revature.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
