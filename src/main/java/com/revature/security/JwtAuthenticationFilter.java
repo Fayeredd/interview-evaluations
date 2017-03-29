@@ -32,6 +32,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     private UserDetailsService userDetailsService;
     
+    //This is the token generator. Can be replaced with future microservice providing/varifying tokens
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
     
