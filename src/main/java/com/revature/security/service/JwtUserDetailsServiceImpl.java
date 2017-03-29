@@ -34,4 +34,9 @@ public class JwtUserDetailsServiceImpl implements UserDetailsService {
             return JwtUserFactory.create(user);
         }
     }
+    
+//    @Override
+//    public UserDetails loadUserByUsername(String string) throws UsernameNotFoundException {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }

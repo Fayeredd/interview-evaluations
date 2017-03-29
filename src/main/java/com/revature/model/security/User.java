@@ -34,54 +34,54 @@ for compatibility with actual database Table
 */
 
 @Entity
-@Table(name = "USER")
+@Table(name = "ie_user")
 public class User {
 
         @Id
-        @Column(name = "ID")
+        @Column(name = "u_userID")
         @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
         @SequenceGenerator(name = "user_seq", sequenceName = "user_seq", allocationSize = 1)
         private Long id;
 
-        @Column(name = "USERNAME", length = 50, unique = true)
+        @Column(name = "u_username", length = 50, unique = true)
         @NotNull
         @Size(min = 4, max = 50)
         private String username;
 
-        @Column(name = "PASSWORD", length = 100)
+        @Column(name = "u_password", length = 100)
         @NotNull
         @Size(min = 4, max = 100)
         private String password;
 
-        @Column(name = "FIRSTNAME", length = 50)
+        @Column(name = "u_firstName", length = 50)
         @NotNull
         @Size(min = 4, max = 50)
         private String firstname;
 
-        @Column(name = "LASTNAME", length = 50)
+        @Column(name = "u_lastName", length = 50)
         @NotNull
         @Size(min = 4, max = 50)
         private String lastname;
 
-        @Column(name = "EMAIL", length = 50)
+        @Column(name = "u_email", length = 50)
         @NotNull
         @Size(min = 4, max = 50)
         private String email;
 
-        @Column(name = "ENABLED")
+        @Column(name = "u_enabled")
         @NotNull
         private Boolean enabled;
 
-        @Column(name = "LASTPASSWORDRESETDATE")
+        @Column(name = "u_lastpasswordresetdate")
         @Temporal(TemporalType.TIMESTAMP)
         @NotNull
         private Date lastPasswordResetDate;
 
         @ManyToMany(fetch = FetchType.EAGER)
         @JoinTable(
-                name = "USER_AUTHORITY",
-                joinColumns = {@JoinColumn(name = "USER_ID", referencedColumnName = "ID")},
-                inverseJoinColumns = {@JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID")})
+                name = "ua_user_authority",
+                joinColumns = {@JoinColumn(name = "u_user_id", referencedColumnName = "u_userID")},
+                inverseJoinColumns = {@JoinColumn(name = "a_authority_id", referencedColumnName = "a_authID")})
         private List<Authority> authorities;
 
         public Long getId() {
@@ -154,5 +154,5 @@ public class User {
 
         public void setLastPasswordResetDate(Date lastPasswordResetDate) {
             this.lastPasswordResetDate = lastPasswordResetDate;
-    }
+        }
 }
