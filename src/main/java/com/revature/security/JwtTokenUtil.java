@@ -10,7 +10,6 @@ package com.revature.security;
  * @author FayeRedd
  */
 
-import com.sun.istack.internal.Nullable;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -55,7 +54,6 @@ public class JwtTokenUtil implements Serializable {
     @Value("${jwt.expiration}")
     private Long expiration;
 
-    @Nullable
     public String getUsernameFromToken(String token) {
         String username;
         try {
@@ -67,7 +65,6 @@ public class JwtTokenUtil implements Serializable {
         return username;
     }
 
-    @Nullable
     public Date getCreatedDateFromToken(String token) {
         Date created;
         try {
@@ -79,7 +76,6 @@ public class JwtTokenUtil implements Serializable {
         return created;
     }
 
-    @Nullable
     public Date getExpirationDateFromToken(String token) {
         Date expires;
         try {
@@ -91,7 +87,6 @@ public class JwtTokenUtil implements Serializable {
         return expires;
     }
 
-    @Nullable
     public String getAudienceFromToken(String token) {
         String audience;
         try {
@@ -168,7 +163,6 @@ public class JwtTokenUtil implements Serializable {
                 && (!isTokenExpired(token) || ignoreTokenExpiration(token));
     }
 
-    @Nullable
     public String refreshToken(String token) {
         String refreshedToken;
         try {
