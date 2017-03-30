@@ -52,7 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     }
     
     @Bean
-    public JwtAuthenticationFilter authenticationFilterBean() throws Exception {
+    public JwtAuthenticationFilter authenticationFilterBean(){
         return new JwtAuthenticationFilter();
     }
     

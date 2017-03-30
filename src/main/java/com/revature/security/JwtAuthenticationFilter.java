@@ -10,8 +10,6 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//import org.apache.commons.logging.Log;
-//import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,8 +24,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
  * @author FayeRedd
  */
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
-
- //   private final Log myLogger = LogFactory.getLog(this.getClass());
     
     @Autowired
     private UserDetailsService userDetailsService;
@@ -45,8 +41,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         
         String username = jwtTokenUtil.getUsernameFromToken(authToken);
         
- //       myLogger.info("checking authentication for das user " + username);
-        
         if(username != null && SecurityContextHolder.getContext().getAuthentication() == null){
             UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
             
@@ -54,8 +48,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                
- //               myLogger.info("authenticated user " + username + ", setting security context");
                 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
