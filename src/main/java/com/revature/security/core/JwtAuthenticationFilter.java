@@ -33,7 +33,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
     
-    @Value("Authorization")
+    @Value("${jwt.header}")
     private String tokenHeader;
     
     @Override
@@ -49,6 +49,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                
+ //               myLogger.info("authenticated user " + username + ", setting security context");
+ 
                 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }

@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.security.core.services;
+package com.revature.security.extra;
 
 import com.revature.security.extra.User;
-import com.revature.security.core.JwtUserFactory;
-import com.revature.security.extra.UserRepository;
+import com.revature.security.extra.JwtUserFactory;
+import com.revature.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

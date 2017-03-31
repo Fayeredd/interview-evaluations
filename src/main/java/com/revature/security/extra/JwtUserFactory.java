@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.security.core;
+package com.revature.security.extra;
 
 import com.revature.security.extra.Authority;
 import com.revature.security.extra.User;

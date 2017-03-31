@@ -10,7 +10,7 @@ package com.revature.security.extra;
  * @author FayeRedd
  */
 
-import com.revature.security.core.JwtUser;
+import com.revature.security.extra.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

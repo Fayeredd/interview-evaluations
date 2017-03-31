@@ -2,7 +2,7 @@
  * The MIT License
  *
  */
-package com.revature.security;
+package com.revature.security.extra;
 
 import com.revature.security.extra.JwtTokenUtil;
 import java.util.HashMap;
