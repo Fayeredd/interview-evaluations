@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.security.controllers;
+package com.revature.security.extra;
 
-import com.revature.security.JwtAuthenticationRequest;
-import com.revature.security.JwtTokenUtil;
-import com.revature.security.JwtUser;
-import com.revature.security.service.JwtAuthenticationResponse;
+import com.revature.security.core.JwtAuthenticationRequest;
+import com.revature.security.extra.JwtTokenUtil;
+import com.revature.security.core.JwtUser;
+import com.revature.security.core.services.JwtAuthenticationResponse;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

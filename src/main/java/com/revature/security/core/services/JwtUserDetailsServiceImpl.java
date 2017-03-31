@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.security.service;
+package com.revature.security.core.services;
 
-import com.revature.model.security.User;
-import com.revature.security.JwtUserFactory;
-import com.revature.repositories.UserRepository;
+import com.revature.security.extra.User;
+import com.revature.security.core.JwtUserFactory;
+import com.revature.security.extra.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -34,4 +34,9 @@ public class JwtUserDetailsServiceImpl implements UserDetailsService {
             return JwtUserFactory.create(user);
         }
     }
+    
+//    @Override
+//    public UserDetails loadUserByUsername(String string) throws UsernameNotFoundException {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }

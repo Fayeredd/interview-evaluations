@@ -4,6 +4,7 @@
  */
 package com.revature.security;
 
+import com.revature.security.extra.JwtTokenUtil;
 import java.util.HashMap;
 import java.util.Map;
 import org.assertj.core.util.DateUtil;

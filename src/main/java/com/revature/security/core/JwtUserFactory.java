@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.security;
+package com.revature.security.core;
 
-import com.revature.model.security.Authority;
-import com.revature.model.security.User;
+import com.revature.security.extra.Authority;
+import com.revature.security.extra.User;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;

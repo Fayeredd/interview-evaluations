@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.security.controllers;
+package com.revature.security.extra;
 
-import com.revature.security.JwtTokenUtil;
-import com.revature.security.JwtUser;
+import com.revature.security.extra.JwtTokenUtil;
+import com.revature.security.core.JwtUser;
 
 import javax.servlet.http.HttpServletRequest;
 

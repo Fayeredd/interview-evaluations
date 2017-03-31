@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.security;
+package com.revature.security.extra;
 
 /**
  *
  * @author FayeRedd
  */
 
+import com.revature.security.core.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
