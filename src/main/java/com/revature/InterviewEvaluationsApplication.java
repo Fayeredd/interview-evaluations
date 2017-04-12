@@ -10,10 +10,7 @@ import com.revature.repositories.PersonRepository;
 @SpringBootApplication
 public class InterviewEvaluationsApplication {
 	
-	public static void main(String[] args) {
-                              
-		SpringApplication.run(InterviewEvaluationsApplication.class, args);
-		
-	}
-	
+    public static void main(String[] args) {
+        SpringApplication.run(InterviewEvaluationsApplication.class, args);
+    }
 }
