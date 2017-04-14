@@ -6,7 +6,7 @@
 package com.revature.config;
 
 import com.revature.security.JwtAuthenticationEntryPoint;
-import com.revature.security.JwtAuthenticationFilter;
+import com.revature.security.extra.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
