@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.revature.revatureSecurity;
+package com.revature.security.extra;
 
 import java.io.Serializable;
 

@@ -8,7 +8,7 @@ package com.revature.security.extra.controllers;
 import com.revature.security.JwtAuthenticationRequest;
 import com.revature.security.extra.JwtTokenUtil;
 import com.revature.security.extra.JwtUser;
-import com.revature.revatureSecurity.JwtAuthenticationResponse;
+import com.revature.security.extra.JwtAuthenticationResponse;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
